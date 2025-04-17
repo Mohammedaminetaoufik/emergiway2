@@ -32,6 +32,21 @@
             android:exported="true">
             <!-- You can add an intent filter if required -->
         </activity>
+
+        <!-- HomeActivity -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" />
+
+        <!-- MapActivity -->
+        <activity
+            android:name=".MapActivity"
+            android:exported="true" />
+
+        <!-- HttpCommandsActivity -->
+        <activity
+            android:name=".HttpCommandsActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

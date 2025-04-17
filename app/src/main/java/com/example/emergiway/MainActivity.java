@@ -1,6 +1,9 @@
 package com.example.emergiway;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +23,12 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        
+        // Redirect to HomeActivity after a short delay (like a splash screen)
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+            startActivity(intent);
+            finish(); // Close MainActivity so user can't go back to it
+        }, 1500); // 1.5 seconds delay
     }
 }

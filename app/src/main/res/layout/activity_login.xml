@@ -7,26 +7,26 @@
 
     <EditText
         android:id="@+id/matriculeInput"
-        android:hint="Matricule"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Matricule"
         android:minHeight="48dp"
-        android:padding="12dp"
-        android:layout_height="wrap_content" />
+        android:padding="12dp" />
 
     <EditText
         android:id="@+id/passwordInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:hint="Mot de passe"
         android:inputType="textPassword"
-        android:layout_width="match_parent"
         android:minHeight="48dp"
-        android:padding="12dp"
-        android:layout_height="wrap_content" />
+        android:padding="12dp" />
 
     <Button
         android:id="@+id/loginBtn"
-        android:text="Connexion"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Connexion" />
 
     <ProgressBar
         android:id="@+id/loader"
