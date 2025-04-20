@@ -1,9 +1,41 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Advanced green theme and styles below -->
     <!-- Base application theme. -->
     <style name="Base.Theme.Emergiway" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Advanced green theme -->
+        <item name="colorPrimary">@color/green_primary</item>
+        <item name="colorPrimaryDark">@color/green_primary_dark</item>
+        <item name="colorPrimaryVariant">@color/green_primary_dark</item>
+        <item name="colorOnPrimary">@color/green_on_primary</item>
+        <item name="colorSecondary">@color/green_secondary</item>
+        <item name="colorSecondaryVariant">@color/green_accent</item>
+        <item name="colorOnSecondary">@color/green_on_secondary</item>
+        <item name="colorBackground">@color/green_background</item>
+        <item name="colorOnBackground">@color/green_on_background</item>
+        <item name="colorSurface">@color/green_surface</item>
+        <item name="colorOnSurface">@color/green_on_surface</item>
+        <item name="android:buttonStyle">@style/GreenButton</item>
+        <item name="android:textColorPrimary">@color/green_on_surface</item>
     </style>
 
     <style name="Theme.Emergiway" parent="Base.Theme.Emergiway" />
+
+    <!-- Advanced Button Style -->
+    <style name="GreenButton" parent="Widget.Material3.Button">
+        <item name="android:backgroundTint">@color/green_primary</item>
+        <item name="android:textColor">@color/green_on_primary</item>
+        <item name="android:cornerRadius">16dp</item>
+        <item name="android:elevation">6dp</item>
+        <item name="android:paddingLeft">32dp</item>
+        <item name="android:paddingRight">32dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- Advanced Text Style -->
+    <style name="GreenText" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/green_on_surface</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
 </resources>

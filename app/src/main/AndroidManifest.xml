@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 🔐 Permissions go here, outside <application> -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -16,7 +20,7 @@
         android:theme="@style/Theme.Emergiway"
         tools:targetApi="31">
 
-        <!-- LoginActivity as the launcher -->
+        <!-- Launcher activity -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -26,27 +30,13 @@
             </intent-filter>
         </activity>
 
-        <!-- MainActivity (destination activity after login) -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <!-- You can add an intent filter if required -->
-        </activity>
+        <!-- Other activities -->
+        <activity android:name=".MainActivity" android:exported="true" />
+        <activity android:name=".HomeActivity" android:exported="true" />
+        <activity android:name=".MapActivity" android:exported="true" />
+        <activity android:name=".HttpCommandsActivity" android:exported="true" />
+        <activity android:name=".ChatbotActivity" android:exported="true" />
 
-        <!-- HomeActivity -->
-        <activity
-            android:name=".HomeActivity"
-            android:exported="true" />
-
-        <!-- MapActivity -->
-        <activity
-            android:name=".MapActivity"
-            android:exported="true" />
-
-        <!-- HttpCommandsActivity -->
-        <activity
-            android:name=".HttpCommandsActivity"
-            android:exported="true" />
     </application>
 
 </manifest>

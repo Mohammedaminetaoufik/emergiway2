@@ -11,6 +11,7 @@ import org.json.JSONObject;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -39,8 +40,9 @@ public class LoginActivity extends AppCompatActivity {
         String password = passwordInput.getText().toString();
         if (matricule.equals("anwar") && password.equals("1234")) {
             Toast.makeText(LoginActivity.this, "Connexion test réussie", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-            startActivity(intent);
+            AtomicReference<Intent> intent;
+            intent = new AtomicReference<>(new Intent(LoginActivity.this, MainActivity.class));
+            startActivity(intent.get());
             finish();
             return;}
         // Check for empty input fields

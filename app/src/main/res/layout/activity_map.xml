@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MapActivity">
 
+    <!-- Header Section -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:background="#EEEEEE">
+        android:background="#EEEEEE"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/backButton"
@@ -26,19 +31,38 @@
             android:gravity="center" />
     </LinearLayout>
 
-    <!-- This is a placeholder for the map view -->
-    <!-- In a real implementation, you would use a MapView or fragment here -->
-    <FrameLayout
-        android:id="@+id/mapContainer"
+    <!-- Control Buttons Row -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#E1F5FE">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center">
 
-        <TextView
+        <Button
+            android:id="@+id/btnSwitchTile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Map would be displayed here"
-            android:textSize="18sp" />
-    </FrameLayout>
+            android:text="Switch Tile" />
+
+        <Button
+            android:id="@+id/btnAddMarker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Marker" />
+
+        <Button
+            android:id="@+id/btnNightMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Night Mode" />
+    </LinearLayout>
+
+    <!-- Map View -->
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:ignore="MissingClass" />
 </LinearLayout>
