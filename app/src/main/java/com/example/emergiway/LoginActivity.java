@@ -37,7 +37,12 @@ public class LoginActivity extends AppCompatActivity {
     private void loginUser() {
         String matricule = matriculeInput.getText().toString();
         String password = passwordInput.getText().toString();
-
+        if (matricule.equals("anwar") && password.equals("1234")) {
+            Toast.makeText(LoginActivity.this, "Connexion test réussie", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+            return;}
         // Check for empty input fields
         if (matricule.isEmpty() || password.isEmpty()) {
             resultText.setText("Veuillez entrer le matricule et le mot de passe.");

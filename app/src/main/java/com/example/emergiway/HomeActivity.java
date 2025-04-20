@@ -10,6 +10,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private Button mapButton;
     private Button httpCommandsButton;
+    private Button chatbotButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,15 +20,21 @@ public class HomeActivity extends AppCompatActivity {
         // Initialize buttons
         mapButton = findViewById(R.id.mapButton);
         httpCommandsButton = findViewById(R.id.httpCommandsButton);
+        chatbotButton = findViewById(R.id.chatbotButton);
 
         // Set click listeners
+        httpCommandsButton.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, HttpCommandsActivity.class);
+            startActivity(intent);
+        });
+
         mapButton.setOnClickListener(v -> {
             Intent intent = new Intent(HomeActivity.this, MapActivity.class);
             startActivity(intent);
         });
 
-        httpCommandsButton.setOnClickListener(v -> {
-            Intent intent = new Intent(HomeActivity.this, HttpCommandsActivity.class);
+        chatbotButton.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, ChatbotActivity.class);
             startActivity(intent);
         });
     }
